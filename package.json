@@ -1,0 +1,16 @@
+{
+  "name": "my_prom",
+  "version": "1.0.0",
+  "description": "testing prometheus",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanjay Charles",
+  "license": "ISC",
+  "dependencies": {
+    "cluster": "^0.7.7",
+    "express": "^4.17.1",
+    "prom-client": "^11.5.3"
+  }
+}
