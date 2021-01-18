@@ -1,19 +1,16 @@
 version: "3"
 
 services:
+    grafana:
+        image: grafana/grafana:latest
+        ports:
+            - 3001:3000
 
-  grafana:
-    image: grafana/grafana:latest
-    ports:
-    - 3001:3000
-
-  prometheus:
-    image: prom/prometheus:latest
-    volumes: 
-    - /home/sanjay/Desktop/my_prom/prometheus.yml:/etc/prometheus/prometheus.yml
-    expose: 
-    - 9090
-    ports: 
-    - 9090:9090
-   
-  
+    prometheus:
+        image: prom/prometheus:latest
+        volumes:
+            - ./prometheus.yml:/etc/prometheus/prometheus.yml
+        expose:
+            - 9090
+        ports:
+            - 9090:9090
